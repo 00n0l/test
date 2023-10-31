@@ -5,14 +5,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #36393F;
+        /* Reset some default browser styles */
+        body, h1, h2, h3, p, button, a {
             margin: 0;
             padding: 0;
-            color: white;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
         }
 
+        /* Apply a background */
+        body {
+            background: #f4f4f4;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            background: #333;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        header h1 span {
+            color: #FF5733;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Style the main content */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 150px);
+            padding: 2em;
+        }
+
+        .intro {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #FF5733;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Style the footer */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        /* Discord UI styles */
         .container {
             width: 300px;
             margin: 50px auto;
@@ -21,7 +106,7 @@
             border-radius: 5px;
         }
 
-        .header {
+        .header-discord {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -51,7 +136,7 @@
             margin-top: 20px;
         }
 
-        .btn {
+        .btn-discord {
             background-color: #40444B;
             padding: 10px 20px;
             border-radius: 5px;
@@ -82,29 +167,48 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="circle">🙂</div>
-            <div class="name">yaz n immy</div>
-            <div class="options">...</div>
+    <header>
+        <h1>Website <span>Title</span></h1>
+        <nav>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+        </nav>
+    </header>
+    <main>
+        <div class="intro">
+            <h2>Welcome to the Site</h2>
+            <p>Here's some introductory text for your website.</p>
+            <button><a href="#">Get Started</a></button>
         </div>
-        <div class="btn-group">
-            <div class="btn">Message</div>
-            <div class="btn">Voice Call</div>
-            <div class="btn">Video Call</div>
+
+        <!-- Discord UI -->
+        <div class="container">
+            <div class="header-discord">
+                <div class="circle">🙂</div>
+                <div class="name">yaz n immy</div>
+                <div class="options">...</div>
+            </div>
+            <div class="btn-group">
+                <div class="btn-discord">Message</div>
+                <div class="btn-discord">Voice Call</div>
+                <div class="btn-discord">Video Call</div>
+            </div>
+            <div class="volume-slider-container">
+                <label for="volume">Volume</label>
+                <input type="range" id="volume" class="volume-slider">
+            </div>
+            <ul class="settings-list">
+                <li>Mute</li>
+                <li>Mute Soundboard</li>
+                <li>Turn Off Their Video</li>
+            </ul>
+            <div>DISCORD MEMBER SINCE</div>
+            <div>Oct 28, 2023</div>
         </div>
-        <div class="volume-slider-container">
-            <label for="volume">Volume</label>
-            <input type="range" id="volume" class="volume-slider">
-        </div>
-        <ul class="settings-list">
-            <li>Mute</li>
-            <li>Mute Soundboard</li>
-            <li>Turn Off Their Video</li>
-        </ul>
-        <div>DISCORD MEMBER SINCE</div>
-        <div>Oct 28, 2023</div>
-    </div>
+    </main>
+    <footer>
+        Copyright © 2023. All Rights Reserved.
+    </footer>
 </body>
 
 </html>
